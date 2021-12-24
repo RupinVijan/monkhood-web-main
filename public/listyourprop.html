@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>MonkHood</title>
+    <link rel="stylesheet" href="./css/home/home.css" />
+    <link rel="stylesheet" href="./css/navfoot/navfoot.css">
+    <link rel="stylesheet" href="./css/tenant form/tenform.css">
+    <link rel="shortcut icon" href="./images/monkood-icon (1).png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link rel="stylesheet" href="./loader/loader.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/44f557ccce.js"></script>
+  </head>
+  <body>
+    
+<!-- (--------------------------------------NAVBAR------------------------------------------------------------------) -->
+<nav class="
+navbar navbar-expand-lg navbar-light
+navbar-fixed-top
+my-nav
+" style="position: fixed;
+color: black;
+top:0;background-color: #FCCD1F;
+right: 0;
+left: 0;
+z-index: 99990;">
+<div class="container-fluid">
+    <a class="navbar-brand" href="/"> <img src="./images/MONKHOOD (1).png" alt="" id="nav-logo-img"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+    <div class="collapse navbar-collapse nav_inline" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link comfortaa" href="/service" style="color: black;padding: 9px;"> Services </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active-page" href="/listyourproperty" style="color: black; padding: 9px;"> List Your Property </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="/rentprop" style="color: black; padding: 9px;"> Rent a Property </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link " href="login.html" style="color: black; padding: 9px;"> Login </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link losi" href="signin.html"  style="color: black; padding: 9px;"> Signup </a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="/about" style="color: black; padding: 9px;"> About Us </a>
+          </li>
+
+
+        </ul>
+    </div>
+</div>
+</nav>
+<!-- (----------------------------------------NAVBAR ENDS----------------------------------------------------------------------) -->
+
+
+<!-- (--------------------------------------------------------CONTACT US----------------------------------------------------------) -->
+
+
+
+<div id="hero" style="margin-bottom: -5px; margin-top: 60px;">
+
+  <img src="./images/final-curousal@4x.png" alt="" id="hero-imgg">
+  
+ <!-- <a href="tenantform.html"><img src="./images/rent now.jpeg" alt="" id="rent-now-img"></a> -->
+</div>
+
+  
+<!-- (--------------------------------------------------------CONTACT US ENDS---------------------------------------------------------------) -->
+
+<div class="log-body" >
+  <div class="login-container">
+    <h1>Welcome</h1><br><br>
+    <h3>welcome back, kindly enter your details to proceed</h3>
+    <form action="" onsubmit="handlesubmit(event)" method="POSt">
+      <input type="text" placeholder="Full name" id="name" name="name" required>
+      <input type="email" placeholder="Email" id="emaill" name="email" required>
+      <input type="number" placeholder="Phone Number" id="no" name="no" required>
+      <input type="number" placeholder="Rent Expected" name="price">
+      <input type="text" placeholder="State" name="state">
+      <input type="number" placeholder="Pincode" name="pincode" >
+      <textarea name="address" placeholder="Address" id="" cols="30" rows="5" required></textarea>
+      <!-- <input type="text" placeholder="Gender"> -->
+      <textarea name="requirements" placeholder="Requirements" id="" cols="30" rows="5"></textarea>
+      <br><button class=" btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- (------------------------------------------------------Footer------------------------------------------------------------------------) -->
+
+<footer class="section bg-footer">
+  <div class="container">
+      <div class="row">
+        <img src="./images/monkhood-logo-icon.png" alt="" id="footer-img">
+        <div class="vl"></div>
+          <div class="col-lg-2">
+              <div class="">
+                  <h6 class="footer-heading text-uppercase text-white">Information</h6>
+                  <ul class="list-unstyled footer-link mt-4">
+                    <li><a href="/service">Services</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/">Contact Us</a></li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="col-lg-3">
+              <div class="">
+                  <h6 class="footer-heading text-uppercase text-white">More Information</h6>
+                  <ul class="list-unstyled footer-link mt-4">
+                      <li><a href="">Privacy and Policy </a></li>
+                      <li><a href="">Terms of Use</a></li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="col-lg-2">
+              <div class="">
+                  <h6 class="footer-heading text-uppercase text-white">Social Handles</h6>
+                  <ul class="list-unstyled footer-link mt-4">
+                      <li><a href="https://instagram.com/monkhoodliving?utm_medium=copy_link">Instagram </a></li>
+                      <li><a href="https://www.facebook.com/monkhoodliving/">Facebook</a></li>
+                      <li><a href="https://www.linkedin.com/company/monkhoodliving">Linkedin</a></li>
+                      <li><a href="">Twitter
+              </div>
+          </div>
+
+      </div>
+  </div>
+
+  <div class="text-center mt-5">
+      <p class="footer-alt mb-0 f-14">2019 © Monkhood Living Pvt. Ltd.</p>
+  </div>
+</footer>
+
+<!-- (------------------------------------------FOOTER ENDS----------------------------------------------------------------------------------) -->
+
+
+
+    <script src="./javascript/home/home.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./javascript/navfoot/navbar.js"></script>
+<script src="./javascript/list your property/listprop.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+AOS.init({
+	duration: 50000000200,
+});
+
+</script>
+  </body>
+</html>

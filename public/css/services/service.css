@@ -1,0 +1,116 @@
+.log-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: #fffae8;
+  margin-top: 50px;
+}
+#big-img-login {
+  height: 90%;
+  margin: -70px 0px auto;
+  width: 50%;
+
+}
+.login-container {
+  /* padding: 20px 5px; */
+  width: 34%;
+  min-width: 380px;
+  height: 90%;
+  margin: auto;
+  border-radius: 40px;
+  background-color: #ffeca4;
+  /* padding-top: 10px; */
+  height: 500px;
+}
+.login-container h1 {
+  text-align: center;
+  font-family: "comfortaa";
+  font-size: 1.5rem;
+  width: 80%;
+  margin: auto;
+  color: #000000;
+  margin-top: 0px;
+  margin-bottom: 25px;
+
+}
+.login-container h3 {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #7b7676;
+  margin-top: -45px;
+  margin-bottom: 25px;
+  /* background-color: black; */
+}
+.login-container form span {
+  margin-top: 15px;
+  color: black;
+  font-size: 15px;
+  text-align: start;
+}
+.login-container form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.login-container form input {
+  background-color: #fffae8;
+  border-radius: 30px;
+  color: black;
+  width: 75%;
+  margin: 10px 0px;
+  height: 40px;
+}
+.login-container form a {
+  color: black;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-decoration: 1px solid black underline;
+}
+.login-container form button {
+  margin: 20px;
+  background-color: #fccd1f;
+  color: white;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  font-size: 1.3rem;
+  padding: 8px 20px 12px;
+  width: 30%;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-container form button:hover {
+  cursor: pointer;
+  background-color: #F59500;
+}
+
+
+@media only screen and (max-width: 949px) {
+  #big-img-login {
+    width: 90%;
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 637px) {
+.login-container{
+  border-radius: 0px;
+}
+.login-container form input {
+  width: 100%;
+}
+}
+
+input::placeholder{
+  font-family: 'comfortaa';
+  color: #7b7676;
+}

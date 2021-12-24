@@ -1,0 +1,105 @@
+.log-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  /* min-height: 100vh; */
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: #fccd1f;
+}
+#big-img-login {
+  height: 90%;
+  margin: auto 50px;
+  width: 50%;
+}
+.login-container {
+  padding: 20px;
+  width: 90%;
+  min-width: 380px;
+  height: 90%;
+  margin: auto;
+  border-radius: 60px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background-color: #ffffff;
+}
+.login-container h1 {
+  text-align: center;
+  font-family: "comfortaa";
+  font-size: 2rem;
+  color: #000000;
+  font-weight: 800;
+}
+.login-container h3 {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #7b7676;
+  margin-top: -45px;
+  /* background-color: black; */
+}
+.login-container form {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 50px 0px;
+  padding-bottom: 10px;
+  text-align: center;
+  /* width: 100%; */
+}
+.login-container form input,
+.login-container form textarea {
+  background-color: #ffeca4;
+  border-radius: 30px;
+  color: black;
+  width: 46%;
+  margin: 20px 20px;
+}
+.login-container form a {
+  color: black;
+  font-size: 0.9rem;
+}
+.login-container form button {
+  margin: 20px;
+  background-color: #fccd1f;
+  color: white;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  padding: 6px 35px;
+  outline: none;
+  border: none;
+  margin-bottom: 0px;
+}
+.login-container form button:hover {
+  cursor: pointer;
+  background-color: #f59500;
+}
+@media only screen and (max-width: 949px) {
+  #big-img-login {
+    width: 90%;
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .login-container form input,
+  .login-container form textarea {
+    width: 80%;
+  }
+  .login-container {
+    border-radius: 0px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .login-container form input,
+  .login-container form textarea {
+    width: 94%;
+  }
+}
+#property{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  
+}

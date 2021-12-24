@@ -1,0 +1,293 @@
+/*
+  VARIABLES
+*/
+/*
+  STYLES
+*/
+html {
+  box-sizing: border-box;
+}
+
+body {
+  color: #49525a;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.6em;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 60px;
+  background: #f59600;
+  color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    height: 75px;
+  }
+}
+header .logo {
+  float: left;
+}
+header .logo::before {
+  content: "";
+  display: inline-block;
+  height: 44px;
+  width: 44px;
+  background: #FF0039;
+  border-radius: 50%;
+}
+header .logo::before, header .logo-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 1rem;
+  line-height: 60px;
+}
+@media only screen and (min-width: 768px) {
+  header .logo::before, header .logo-text {
+    line-height: 75px;
+  }
+}
+header .nav-trigger, header .right-links {
+  float: right;
+  line-height: 60px;
+  padding: 0 2.4rem;
+}
+@media only screen and (min-width: 768px) {
+  header .nav-trigger, header .right-links {
+    line-height: 75px;
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #E9EFF3;
+  max-height: calc(100vh - 60px);
+  overflow: hidden;
+}
+@media only screen and (min-width: 768px) {
+  .body {
+    flex-direction: row;
+    max-height: calc(100vh - 75px);
+  }
+}
+
+.content {
+  flex: 1;
+  max-height: calc(100vh - 60px);
+  overflow-y: scroll;
+  padding: 0.5rem 2rem;
+}
+
+.side-nav {
+  background: #ffeca4;
+  max-height: calc(100vh - 60px);
+  overflow-y: scroll;
+  display: none;
+  color: black;
+  flex: 0 0 350px;
+}
+@media only screen and (min-width: 768px) {
+  .side-nav {
+    display: block;
+    flex: 0 0 225px;
+    max-height: calc(100vh - 75px);
+  }
+}
+.side-nav.is-open {
+  display: block;
+}
+.side-nav .event {
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+  background: #ffeca4;
+  padding: 0 1.8rem;
+}
+.side-nav ul {
+  list-style-type: none;
+  padding: 2rem 0;
+  margin: 0;
+}
+.side-nav ul li:hover {
+  cursor: pointer;
+  color: #1e1e1d;
+}
+.side-nav ul li {
+  position: relative;
+  padding: 1rem 1.8rem;
+  color: black;
+}
+.side-nav ul li.active {
+  color: black;
+}
+.side-nav ul li.active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 3px;
+  background: #FF0039;
+}
+.side-nav ul li i {
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+  padding-right: 1rem;
+}
+.side-nav li.label {
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 0.15rem;
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .hidden-M {
+    display: none;
+  }
+}
+
+.visible-M {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .visible-M {
+    display: block;
+  }
+}
+#img{
+  text-align: center;
+  height: 500px;
+}
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+.card-set {
+  padding: 15px;
+}
+.card-set .card {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 0;
+  border-bottom: 4px solid #262C3D;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+.card-set .card .card-images {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  padding-top: 5px;
+  margin-bottom: 15px;
+}
+.card-set .card .card-images .image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  transition: transform 0.5s ease-in;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.card-set .card .card-images .image:nth-child(3) {
+  box-shadow: 0 0 0 rgba(59, 46, 107, 0);
+  transform: translateX(-50%) scale(0.95);
+  transition: box-shadow 0.3s ease-in, transform 0.5s ease-in 0.5s;
+}
+.card-set .card .card-images:hover {
+  z-index: 10;
+}
+.card-set .card .card-images:hover .image:nth-child(1) {
+  transform: translateX(-100%) translateY(0%) rotate(-1deg) scale(0.85) !important;
+  transition: transform 0.5s ease-in;
+}
+.card-set .card .card-images:hover .image:nth-child(1):hover {
+  transform: translateX(-130%) translateY(0%) rotate(-3deg) scale(0.85) !important;
+  transition: transform 0.5s ease-in;
+}
+.card-set .card .card-images:hover .image:nth-child(2) {
+  transform: translateX(0%) translateY(0%) rotate(1deg) scale(0.85) !important;
+}
+.card-set .card .card-images:hover .image:nth-child(2):hover {
+  transform: translateX(30%) translateY(0%) rotate(3deg) scale(0.85) !important;
+  transition: transform 0.5s ease-in;
+}
+.card-set .card .card-images:hover .image:nth-child(3) {
+  animation: swipe-bottom-top 2s 1;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  z-index: 1;
+  transform: translateX(-50%) scale(0.95) !important;
+  transition: box-shadow 0.3s ease-in, transform 0.5s ease-in 0.3s;
+}
+.card-set .card .card-images:hover .image:nth-child(3):hover {
+  z-index: 2;
+}
+.card-set .card .card-body {
+  position: relative;
+  padding: 15px;
+}
+.card-set .card .card-body h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4d4d4d;
+}
+.card-set .card .card-body a.btn {
+  background: #262C3D;
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  transition: all 0.4s;
+}
+.card-set .card .card-body a.btn:hover {
+  background: #262C3D;
+  border-color: #E5E9F8;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.7s;
+}
+.card-set .card:hover .image:nth-child(1) {
+  transform: translateX(-45%) translateY(-2%) rotate(-6deg) scale(0.95);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in, transform 0.5s ease-in;
+}
+.card-set .card:hover .image:nth-child(2) {
+  transform: translateX(-55%) translateY(0%) rotate(3deg) scale(0.95);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in, transform 0.5s ease-in;
+}
+.card-set .card:hover .image:nth-child(3) {
+  transform: translateX(-50%) scale(0.95);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in, transform 0.5s ease-in 0.3s;
+}
+.list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 25px;
+}
