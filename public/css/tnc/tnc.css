@@ -1,0 +1,25 @@
+.tnc-heading{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.tnc-heading h1 {
+  font-size: 1.9rem;
+  font-family: "comfortaa";
+  margin-top: 50px;
+}
+
+.tnc-heading h2 {
+  font-size: 1.4rem;
+  font-family: "comfortaa";
+}
+
+.tnc-heading h3 {
+  font-size: 0.9rem;
+  font-family: "comfortaa";
+}
+
+.tnc-heading h4 {
+  font-size: 1.2rem;
+  font-family: "comfortaa";
+}
