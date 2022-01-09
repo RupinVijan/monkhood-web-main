@@ -16,7 +16,7 @@ let transporter1 = nodemailer.createTransport({
 
 let mailOptions1 = {
     from: 'admin@monkhood.in', 
-    to: `support@monkhood.in , ${req.body.email}`, 
+    to: `monkhoodliving@gmail.com , ${req.body.email}`, 
     subject: 'Student form response',
     html: ` <h2>Dear ${req.body.name}</h2><p>thank you for your interest in MONKHOOD. We have rounded up all the need-to-knows about renting and listing. Our team will make the best choices based on your preferences. And will contact you soon.<br> Stay connected. </p>`
 };

@@ -1,11 +1,27 @@
 const ownerSchema = require('../models/ownerform')
+const addressSchema = require('../models/address')
 
 const nodemailer = require('nodemailer')
 
 exports.createProduct = async(req,res,next)=>{
     try {
-        // console.log(req.body.email)
-        const product= await ownerSchema.create(req.body)
+
+        const product= await ownerSchema.create({
+            'name':req.body.name,
+            'email':req.body.email,
+            'ph_number':req.body.ph_number,
+            'requirements':req.body.requirements,
+        });
+        const product1= await addressSchema.create({
+            location:req.body.address,
+            pincode:req.body.pincode,
+            state:req.body.state,
+            college:req.body.college,
+            price:req.body.price,
+            floor:req.body.floor,
+            propertyType:req.body.propertyType,
+            owner:product._id,
+        })
         
 
 const log = console.log
@@ -43,7 +59,7 @@ const log = console.log
 }
 exports.getAllProducts = async(req,res)=>{
     try {
-        const product = await ownerSchema.find();
+        const product = await addressSchema.find();
     res.status(200).send({success:true,product})
     } catch (error) {
         res.status(500).send({error})
@@ -59,14 +75,34 @@ exports.updateProduct = async(req,res,next)=>{
             success:false,
             message:"product not Found"
         })}
-    product =await ownerSchema.findByIdAndUpdate(req.params.id,req.body,{
+    product =await ownerSchema.findByIdAndUpdate(req.params.id,{
+        'name':req.body.name,
+            'email':req.body.email,
+            'ph_number':req.body.ph_number,
+            'requirements':req.body.requirements,
+    },{
+        new: true,
+        runValidators: true,
+        useFindAndModify: false
+    })
+    const product1 =await addressSchema.findByIdAndUpdate(req.params.id,{
+        location:req.body.address,
+        pincode:req.body.pincode,
+        state:req.body.state,
+        college:req.body.college,
+        price:req.body.price,
+        floor:req.body.floor,
+        propertyType:req.body.propertyType,
+        owner:product._id,
+    },{
         new: true,
         runValidators: true,
         useFindAndModify: false
     })
     res.status(200).send({
         success:true,
-        product
+        product,
+        product1
     })
     } catch (error) {
         res.status(500).send({error})
@@ -95,7 +131,9 @@ exports.deleteProduct = async (req,res,next) =>{
 }
 exports.getProductById= async (req,res,next) =>{
     try {
-        let product = await ownerSchema.findById(req.params.id)
+        let product = await addressSchema.findById(req.params.id)
+        let product1 =  await ownerSchema.findById(product.owner)
+        // let product12= product1.concat(product)
     if(!product){
         res.status(500).send({
             success:false,
@@ -104,7 +142,8 @@ exports.getProductById= async (req,res,next) =>{
 }
     res.status(200).send({
         success:true,
-        product
+        product,
+        product1
     })
     } catch (error) {
         res.status(500).send({error})

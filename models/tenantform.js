@@ -12,9 +12,11 @@ const productSchema = mongoose.Schema({
   },
   ph_number: {
     type: String,
+    unique:true
   },
   email : {
     type:String,
+    unique:true
   },
   requirements : {
     type : String, 
