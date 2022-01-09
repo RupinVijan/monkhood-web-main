@@ -126,7 +126,7 @@ else{
 
 app.get('/dashBoard/admin/owners', (req, res) => {
   if(req.cookies.name==="admin9599"){
-  res.sendFile(path.join(pathname + "/ownerHistory.html"))
+  res.sendFile(path.join(pathname + "/ownerhistory.html"))
   res.status(200);
 }
 else{
