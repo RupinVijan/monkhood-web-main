@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>update</title>
+    <title>add Tenant</title>
     <link rel="stylesheet" href="./../../css/tenant form/tenform.css" />
     <!-- CSS only -->
     <link
@@ -40,7 +40,7 @@
         <div class="login-container" style="margin: 0px auto;">
           <h1>Welcome</h1><br><br>
           <h3>welcome back, kindly enter your details to proceed</h3>
-          <form action="" method="POST" onsubmit="handlesubmitt(event)">
+          <form action="" onsubmit="handlesubmitt(event)">
             <input type="text" placeholder="Full name" id="name" name="name" required>
             <input type="number" placeholder="Phone Number" id="no" name="no" required>
             <input type="email" placeholder="Email" id="email" name="email" required>
@@ -54,7 +54,8 @@
       
 
     <script>
-      const updateinfo = async (event) => {
+      const handlesubmitt = async (event) => {
+        event.preventDefault()
         const name = event.target["name"].value;
         const ph_number = event.target["no"].value;
         const email = event.target["email"].value;
