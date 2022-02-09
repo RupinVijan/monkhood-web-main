@@ -29,7 +29,7 @@ const log = console.log
         service: 'gmail',
         auth: {
             user: "monkhoodliving@gmail.com" , 
-            pass: "eptrltvhvbwytrbp" 
+            pass: "mqhupaqdraifgflq" 
         }
     });
     
